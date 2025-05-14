@@ -5,6 +5,9 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+
+using static System.Net.Mime.MediaTypeNames;
+
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ATBASH
@@ -21,10 +24,10 @@ namespace ATBASH
         }
        
 
-        static int Number_of_points(string txt)
+        static int Number_of_points(string txt , string[] suspicious_words)
         {
             int points = 0;
-            string[] suspicious_words = {"bomb", "nukhba", "fighter", "rocket", "secret"};
+            
             foreach (var word in txt.Split(" "))
             {
                 foreach(var Suspicious_word in suspicious_words)
@@ -65,8 +68,26 @@ namespace ATBASH
 
         static void Main(string[] args)
         {
-            Console.WriteLine(args[0]);
+            string msg;
+            string[] words;
+            try
+            {
+                msg = File.ReadAllText(args[0]);
+                words = File.ReadAllText(args[1]).Split(" ");
+            }
+            catch { 
+
+                return;
+            }
+
+            string DecryptedText = conversion(msg);
+
+            int sum = Number_of_points(DecryptedText , words);
+
+            Console.WriteLine(DecryptedText);
             
+            Console.WriteLine(Print_message(sum));
+
         }
     }
 }
