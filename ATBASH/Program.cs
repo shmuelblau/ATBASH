@@ -10,6 +10,18 @@ namespace ATBASH
 {
     internal class Program
     {
+<<<<<<< HEAD
+        
+        public static string conversion(string input)
+        {
+            return string.Join("", input.Select(x => char.ToLower(x)).Select(s =>char.IsLetter(s) ? (char)((int)s + ((109 - (int)s) * 2)+1) : s).ToArray());
+            
+            
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine(conversion("nop "));
+=======
         static int Number_of_points(string txt)
         {
             int points = 0;
@@ -28,6 +40,7 @@ namespace ATBASH
         }
         static void Main(string[] args)
         {
+>>>>>>> 5d8eea8a7f589c6b08f51028b290f5ac8a3e43fa
             
         }
     }
