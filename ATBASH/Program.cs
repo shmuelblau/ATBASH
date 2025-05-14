@@ -11,13 +11,13 @@ namespace ATBASH
         
         public static string conversion(string input)
         {
-            string output =string.Join("", input.Select(x => char.ToLower(x)).Select(s => (char)((int)s + ((103 - (int)s) * 2))).ToArray());
-            string[] a = output.Split(',');
-            return output;
+            return string.Join("", input.Select(x => char.ToLower(x)).Select(s =>char.IsLetter(s) ? (char)((int)s + ((109 - (int)s) * 2)+1) : s).ToArray());
+            
+            
         }
         static void Main(string[] args)
         {
-            Console.WriteLine(conversion("azaz"));
+            Console.WriteLine(conversion("nop "));
             
         }
     }
