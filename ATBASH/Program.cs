@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +10,7 @@ namespace ATBASH
 {
     internal class Program
     {
+<<<<<<< HEAD
         
         public static string conversion(string input)
         {
@@ -18,6 +21,26 @@ namespace ATBASH
         static void Main(string[] args)
         {
             Console.WriteLine(conversion("nop "));
+=======
+        static int Number_of_points(string txt)
+        {
+            int points = 0;
+            string[] suspicious_words = {"bomb", "nukhba", "fighter", "rocket", "secret"};
+            foreach (var word in txt.Split(" "))
+            {
+                foreach(var Suspicious_word in suspicious_words)
+                {
+                    if (word == Suspicious_word)
+                    {
+                        points++;
+                    }
+                }
+            }
+            return points;
+        }
+        static void Main(string[] args)
+        {
+>>>>>>> 5d8eea8a7f589c6b08f51028b290f5ac8a3e43fa
             
         }
     }
