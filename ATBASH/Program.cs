@@ -86,7 +86,7 @@ namespace ATBASH
 
             Console.WriteLine(DecryptedText);
             
-            Console.WriteLine(Print_message(sum));
+            Print_message(sum);
 
         }
     }
