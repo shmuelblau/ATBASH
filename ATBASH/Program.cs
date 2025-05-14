@@ -10,7 +10,7 @@ namespace ATBASH
 {
     internal class Program
     {
-<<<<<<< HEAD
+
         
         public static string conversion(string input)
         {
@@ -18,10 +18,8 @@ namespace ATBASH
             
             
         }
-        static void Main(string[] args)
-        {
-            Console.WriteLine(conversion("nop "));
-=======
+       
+
         static int Number_of_points(string txt)
         {
             int points = 0;
@@ -40,7 +38,7 @@ namespace ATBASH
         }
         static void Main(string[] args)
         {
->>>>>>> 5d8eea8a7f589c6b08f51028b290f5ac8a3e43fa
+
             
         }
     }
