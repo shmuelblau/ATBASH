@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ATBASH": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\user\\source\\repos\\ATBASH\\atbash.txt C:\\Users\\user\\source\\repos\\ATBASH\\words.txt"
+    }
+  }
+}
