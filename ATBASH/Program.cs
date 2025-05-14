@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ATBASH
 {
@@ -36,6 +37,32 @@ namespace ATBASH
             }
             return points;
         }
+        static void Print_message(int points) 
+        {
+            if (points > 1 && points <= 5)
+            {
+                Console.WriteLine("----warning----");
+                Console.WriteLine($"The number of points is:{points} ");
+            }
+            else if (points >= 6 && points <= 10)
+            {
+                Console.WriteLine("----danger!!!----");
+                Console.WriteLine($"The number of points is:{points} ");
+            }
+            else if (points >= 11 && points <= 15)
+            {
+                Console.WriteLine("----High alert!!!----");
+                Console.WriteLine($"The number of points is:{points} ");
+            }
+            else if(points > 15) 
+            {
+                Console.WriteLine("----Very high alert!!!----");
+            }
+            {
+                
+            }
+        }
+
         static void Main(string[] args)
         {
 
